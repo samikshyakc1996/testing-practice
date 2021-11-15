@@ -39,9 +39,13 @@ try {
     throw new Error("Expected difference(3) to be 3. Received: " + result);
   // --------------------------------------------------
   // Test Case 4
+
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
-
+  var result = difference();
+  console.log("The difference of difference() is  :" + result);
+  if (result !== 0)
+    throw new Error("Expected difference() to be 0. Received: " + result);
   console.log("All tests passed successfully.");
 
   // ==================================================
