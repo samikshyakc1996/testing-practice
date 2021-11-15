@@ -33,7 +33,10 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
-
+  var result = difference(3);
+  console.log("The difference of difference(3) is  :" + result);
+  if (result !== 3)
+    throw new Error("Expected difference(3) to be 3. Received: " + result);
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
