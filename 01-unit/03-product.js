@@ -1,8 +1,8 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function product() {
-
+function product(num1, num2) {
+  return num1 * num2;
 }
 
 // ==================================================
@@ -14,7 +14,8 @@ try {
   // --------------------------------------------------
   // It should return the product of two numbers.
   var result = product(2, 2);
-  if (result !== 4) throw new Error('Expected product(2, 2) to be 4. Received: ' + result);
+  if (result !== 4)
+    throw new Error("Expected product(2, 2) to be 4. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 2
@@ -36,12 +37,12 @@ try {
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
 
-  console.log('All tests passed successfully.');
+  console.log("All tests passed successfully.");
 
-// ==================================================
-// PRINT ERRORS
-// ==================================================
+  // ==================================================
+  // PRINT ERRORS
+  // ==================================================
 } catch (e) {
-  console.warn('Whoops, the following test did not pass:');
+  console.warn("Whoops, the following test did not pass:");
   console.error(e.message);
 }
