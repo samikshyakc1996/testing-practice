@@ -14,7 +14,7 @@ try {
   // --------------------------------------------------
   // It should return the sum of two numbers.
   var result = sum(1, 1);
-  if (result == 2) console.log("The result is 2");
+  console.log("The sum of sum(1,1) is: " + result);
   if (result !== 2)
     throw new Error("Expected sum(1, 1) to be 2. Received: " + result);
 
@@ -25,8 +25,7 @@ try {
   // It should ignore additional numbers.
 
   var result = sum(1, 1, 2, 3, 4);
-  if (result == 2)
-    console.log("The result is 2 again for first two numbers: 1 and 1.");
+  console.log("The sum of sum(1,1,2,3,4) is: " + result);
   if (result !== 2)
     throw new Error("Expected sum(1, 1,2,3,4) to be 2. Received: " + result);
 
@@ -35,7 +34,7 @@ try {
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
   var result = sum(5);
-  console.log("The single number is " + result);
+  console.log("The sum of sum(5)  is: " + result);
   if (result != 5)
     throw new Error(
       "expected the single number to be displayed. Received: " + result
@@ -44,7 +43,10 @@ try {
   // Test Case 4
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
-
+  var result = sum();
+  console.log("Sum of sum() is: " + result);
+  if (result != 0)
+    throw new Error("Expected sum() to be 0, received: " + result);
   console.log("All tests passed successfully.");
 
   // ==================================================
