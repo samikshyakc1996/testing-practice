@@ -23,7 +23,9 @@ try {
   // --------------------------------------------------
   // It should return 0 when either of the numbers are 0.
   var result = product(2, 0);
+  var result = product(0, 2);
   console.log("The product of product(0,2) is: " + result);
+  console.log("The product of product(2,0) is: " + result);
   if (result !== 0)
     throw new Error("Expected product(2, 0) to be 0. Received: " + result);
 
