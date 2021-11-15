@@ -1,8 +1,8 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function sum() {
-
+function sum(num1, num2) {
+  return num1 + num2;
 }
 
 // ==================================================
@@ -14,7 +14,9 @@ try {
   // --------------------------------------------------
   // It should return the sum of two numbers.
   var result = sum(1, 1);
-  if (result !== 2) throw new Error('Expected sum(1, 1) to be 2. Received: ' + result);
+  if (result == 2) console.log("The result is 2");
+  if (result !== 2)
+    throw new Error("Expected sum(1, 1) to be 2. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 2
@@ -31,12 +33,12 @@ try {
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
 
-  console.log('All tests passed successfully.');
+  console.log("All tests passed successfully.");
 
-// ==================================================
-// PRINT ERRORS
-// ==================================================
+  // ==================================================
+  // PRINT ERRORS
+  // ==================================================
 } catch (e) {
-  console.warn('Whoops, the following test did not pass:');
+  console.warn("Whoops, the following test did not pass:");
   console.error(e.message);
 }
