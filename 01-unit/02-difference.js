@@ -1,8 +1,8 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function difference() {
-
+function difference(num1, num2) {
+  return num1 - num2;
 }
 
 // ==================================================
@@ -14,12 +14,20 @@ try {
   // --------------------------------------------------
   // It should return the difference of two numbers.
   var result = difference(1, 1);
-  if (result !== 0) throw new Error('Expected difference(1, 1) to be 0. Received: ' + result);
+  console.log("The difference of difference(1, 1) is:" + result);
+  if (result !== 0)
+    throw new Error("Expected difference(1, 1) to be 0. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 2
   // --------------------------------------------------
   // It should ignore additional numbers.
+  var result = difference(1, 1, 2, 3);
+  console.log("The difference of difference(1, 1, 2, 3) is  :" + result);
+  if (result !== 0)
+    throw new Error(
+      "Expected difference(1, 1,2,3) to be 0. Received: " + result
+    );
 
   // --------------------------------------------------
   // Test Case 3
@@ -31,12 +39,12 @@ try {
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
 
-  console.log('All tests passed successfully.');
+  console.log("All tests passed successfully.");
 
-// ==================================================
-// PRINT ERRORS
-// ==================================================
+  // ==================================================
+  // PRINT ERRORS
+  // ==================================================
 } catch (e) {
-  console.warn('Whoops, the following test did not pass:');
+  console.warn("Whoops, the following test did not pass:");
   console.error(e.message);
 }
