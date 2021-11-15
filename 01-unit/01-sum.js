@@ -20,8 +20,15 @@ try {
 
   // --------------------------------------------------
   // Test Case 2
+
   // --------------------------------------------------
   // It should ignore additional numbers.
+
+  var result = sum(1, 1, 2, 3, 4);
+  if (result == 2)
+    console.log("The result is 2 again for first two numbers: 1 and 1.");
+  if (result !== 2)
+    throw new Error("Expected sum(1, 1,2,3,4) to be 2. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 3
