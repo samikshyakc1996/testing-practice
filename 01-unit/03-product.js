@@ -33,6 +33,10 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // It should ignore additional numbers.
+  var result = product(2, 3, 4, 5);
+  console.log("The product of product(2,3,4,5) is: " + result);
+  if (result !== 6)
+    throw new Error("Expected product(2, 3,4,5) to be 6. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 4
