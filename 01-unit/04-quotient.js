@@ -14,6 +14,7 @@ try {
   // --------------------------------------------------
   // It should return the quotient of two numbers.
   var result = quotient(2, 2);
+  console.log("The quotient of quotient(2,2) is: " + result);
   if (result !== 1)
     throw new Error("Expected quotient(2, 2) to be 1. Received: " + result);
 
@@ -23,7 +24,7 @@ try {
   // It should return the text 'ERROR' when the second number is 0.
   var result = quotient(2, 0);
   if (result == Infinity) {
-    console.log("error");
+    console.log("The quotient of quotient(2,0) is: ERROR");
   }
   if (result !== Infinity)
     throw new Error(
@@ -34,6 +35,10 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // It should ignore additional numbers.
+  var result = quotient(20, 10, 2);
+  console.log("The quotient of quotient(20,10,2) is: " + result);
+  if (result !== 2)
+    throw new Error("Expected quotient(20,10, 2) to be 2. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 4
