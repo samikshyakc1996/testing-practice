@@ -10,6 +10,9 @@ function difference(num1 = 0, num2 = 0) {
 function multiply(num1 = 0, num2 = 1) {
   return num1 * num2;
 }
+function divide(num1 = 0, num2 = 1) {
+  return num1 / num2;
+}
 
 function calc(operation, num1, num2) {
   switch (operation) {
@@ -19,6 +22,8 @@ function calc(operation, num1, num2) {
       return difference(num1, num2);
     case "multiply":
       return num1 * num2;
+    case "divide":
+      return num1 / num2;
   }
 }
 
@@ -60,7 +65,12 @@ try {
   // Test Case 4
   // --------------------------------------------------
   // It should return the correct quotient when the user provides: 'divide', 9, 3.
-
+  var result = calc("divide", 9, 3);
+  console.log("The answer of calc('divide', 9, 3) is: " + result);
+  if (result !== 3)
+    throw new Error(
+      'Expected calc("divide", 9, 3) to be 3. Received: ' + result
+    );
   // --------------------------------------------------
   // Test Case 5
   // --------------------------------------------------
