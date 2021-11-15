@@ -34,7 +34,12 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
-
+  var result = sum(5);
+  console.log("The single number is " + result);
+  if (result != 5)
+    throw new Error(
+      "expected the single number to be displayed. Received: " + result
+    );
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
