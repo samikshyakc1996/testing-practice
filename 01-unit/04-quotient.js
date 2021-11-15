@@ -1,8 +1,8 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function quotient() {
-
+function quotient(num1, num2) {
+  return num1 / num2;
 }
 
 // ==================================================
@@ -14,12 +14,21 @@ try {
   // --------------------------------------------------
   // It should return the quotient of two numbers.
   var result = quotient(2, 2);
-  if (result !== 1) throw new Error('Expected quotient(2, 2) to be 1. Received: ' + result);
+  if (result !== 1)
+    throw new Error("Expected quotient(2, 2) to be 1. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 2
   // --------------------------------------------------
   // It should return the text 'ERROR' when the second number is 0.
+  var result = quotient(2, 0);
+  if (result == Infinity) {
+    console.log("error");
+  }
+  if (result !== Infinity)
+    throw new Error(
+      "Expected quotient(2, 0) to be Infinity. Received: " + result
+    );
 
   // --------------------------------------------------
   // Test Case 3
@@ -36,12 +45,12 @@ try {
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
 
-  console.log('All tests passed successfully.');
+  console.log("All tests passed successfully.");
 
-// ==================================================
-// PRINT ERRORS
-// ==================================================
+  // ==================================================
+  // PRINT ERRORS
+  // ==================================================
 } catch (e) {
-  console.warn('Whoops, the following test did not pass:');
+  console.warn("Whoops, the following test did not pass:");
   console.error(e.message);
 }
