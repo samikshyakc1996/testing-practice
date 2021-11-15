@@ -24,6 +24,8 @@ function calc(operation, num1, num2) {
       return num1 * num2;
     case "divide":
       return num1 / num2;
+    default:
+      console.log("Operation not supported.");
   }
 }
 
@@ -75,8 +77,7 @@ try {
   // Test Case 5
   // --------------------------------------------------
   // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
-
-  console.log("All tests passed successfully.");
+  var result = calc("exponent", 2, 8);
 
   // ==================================================
   // PRINT ERRORS
