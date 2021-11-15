@@ -1,7 +1,7 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function quotient(num1, num2) {
+function quotient(num1, num2 = 1) {
   return num1 / num2;
 }
 
@@ -44,6 +44,10 @@ try {
   // Test Case 4
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = quotient(20);
+  console.log("The quotient of quotient(20) is: " + result);
+  if (result !== 20)
+    throw new Error("Expected quotient(20) to be 20. Received: " + result);
 
   // --------------------------------------------------
   // Test Case 5
